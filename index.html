@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maafkan Aku Ya Sayang ❤️</title>
+    <!-- Script untuk Boneka Bergerak (Lottie Animation) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.12.2/lottie.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('Foto1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            overflow-x: hidden;
+        }
+
+        .card-container {
+            width: 90%;
+            max-width: 450px;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(10px);
+            padding: 25px 20px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+            text-align: center;
+            position: relative;
+            margin: 20px 0;
+        }
+
+        /* Boneka Bergerak / Animasi */
+        .doll-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 5px auto;
+        }
+
+        /* Slide / Halaman Kata-Kata */
+        .slide {
+            display: none;
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+
+        .slide.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h2 {
+            color: #d63384;
+            margin-bottom: 12px;
+            font-size: 1.3rem;
+        }
+
+        p {
+            color: #444;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .feature-box {
+            background: #fff0f5;
+            border-left: 4px solid #ff69b4;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: left;
+            margin: 12px 0;
+            font-size: 0.85rem;
+            max-height: 220px;
+            overflow-y: auto;
+        }
+
+        .feature-box ul {
+            padding-left: 18px;
+        }
+
+        .feature-box li {
+            margin-bottom: 8px;
+        }
+
+        /* Tombol Navigasi Swap */
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            gap: 10px;
+        }
+
+        button {
+            flex: 1;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 25px;
+            background-color: #ff69b4;
+            color: white;
+            font-weight: bold;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 10px rgba(255, 105, 180, 0.3);
+        }
+
+        button:hover {
+            background-color: #ff1493;
+            transform: translateY(-2px);
+        }
+
+        button:disabled {
+            background-color: #ccc;
+            box-shadow: none;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-forgive {
+            background-color: #28a745;
+            box-shadow: 0 4px 10px rgba(40, 167, 69, 0.3);
+        }
+
+        .btn-forgive:hover {
+            background-color: #218838;
+        }
+
+        /* Tombol Kontrol Musik */
+        .music-control {
+            margin-top: 12px;
+            background-color: #6c757d;
+            font-size: 0.8rem;
+            padding: 8px 12px;
+            border-radius: 20px;
+        }
+
+        .music-control:hover {
+            background-color: #5a6268;
+        }
+
+        .indicator {
+            margin-top: 10px;
+            font-size: 0.75rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="card-container">
+        <!-- Fitur Boneka Bergerak (Diperbaiki dengan Bodymovin) -->
+        <div class="doll-container" id="lottie-animation"></div>
+
+        <!-- HALAMAN 1: FITUR 1 (Permintaan Maaf & Pengakuan) -->
+        <div class="slide active">
+            <h2>Dear SayangKu, Kanjeng ratu💖 </h2>
+            <p>Aku mau ngomong sesuatu sama kamu. Tolong dibaca pelan-pelan ya...</p>
+            <div class="feature-box">
+                <strong>Sorry...</strong>
+                <p style="margin-top: 5px;">Aku sadar kalau aku udah bikin kamu kecewa dan sedih. Aku minta maaf banget ya atas kesalahanku. Maaf aku belum bisa ngasih yang terbaik buat kamu.</p>
+            </div>
+        </div>
+
+        <!-- HALAMAN 2: FITUR 2 (Janji & Komitmen Perubahan) -->
+        <div class="slide">
+            <h2>Kita lewatin semua ini okayy 💖</h2>
+            <p>Aku mau sampaiin sudut pandang sama perasaan ku</p>
+            <div class="feature-box">
+                <strong>Komitmen dan Perbaikan diri aku</strong>
+                <ul>
+                    <li>Aku tau kamu cape kerja, belum ada hal lain juga. Jujur aku juga cape sama sekolah ku. Dengan kondisi ku sekarang aku jujur aku pengen langsung kerja. Aku juga belum mikir masa depan ku sama keluarga ku. Aku tau kamu juga belum kepikiran hal lain nya jadi kamu cape, so sorry.</li>
+                    <li>Aku gak mau cuma minta maaf tanpa ada perubahan. Akan ku usahakan untuk ngasih yang terbaik buat kamu.</li>
+                    <li>Maaf kalau aku ga pekaan orang nya jadi aku minta sama kamu langsung aja bilang, jangan kode-kode ya yang. Aku pengen kita sama-sama enak, lagian juga siapa yang mau berantem kan. Jadi aku minta maaf sebelumnya. Aku minta kamu cerita juga dari sudut pandang kamu.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- HALAMAN 3: FITUR 3 (Pertanyaan Memaafkan & Interaktif) -->
+        <div class="slide">
+            <h2>Kamu Mau Maafin Aku? 👉👈</h2>
+            <p style="font-size: 0.8rem; font-style: italic;">"I just want to say thank you so much for everything, and I’m also sorry for everything. We’ll get through all of this together, okay, honey?" (Aku hanya mau bilang makasih banyak buat semuanya dan maaf juga buat semuanya. Kita lewatin semua ini bareng-bareng oke sayang?)</p>
+            <p>Senyum kamu itu berharga banget buat aku. Maafin aku ya?</p>
+            <div class="feature-box" style="text-align: center; max-height: none;">
+                <strong>Jawaban Kamu</strong>
+                <p id="response-text" style="margin-top: 5px; font-weight: bold; color: #d63384;"></p>
+                <button class="btn-forgive" style="width: 100%; margin-top: 5px;" onclick="forgiveMe()">Iya, Aku Maafin ❤️</button>
+            </div>
+        </div>
+
+        <!-- Tombol Navigasi Perpindahan Halaman (Swap) -->
+        <div class="button-group">
+            <button id="prevBtn" onclick="changeSlide(-1)" disabled>Sebelumnya</button>
+            <button id="nextBtn" onclick="changeSlide(1)">Selanjutnya ➡️</button>
+        </div>
+
+        <!-- Tombol Musik Latar Belakang -->
+        <button class="music-control" id="musicBtn" onclick="toggleMusic()">🎵 Putar Lagu Romantis</button>
+
+        <div class="indicator" id="slideIndicator">Halaman 1 dari 3</div>
+    </div>
+
+    <!-- Audio Musik (Ganti 'lagu.mp3' dengan file musik pilihanmu di folder yang sama) -->
+    <audio id="bgMusic" loop>
+        <source src="favorite girl - justin bieber (sped up).mp3" type="audio/mpeg">
+        Browser kamu tidak mendukung pemutar audio.
+    </audio>
+
+    <script>
+        // Inisialisasi Animasi Lottie (Boneka Bergerak yang Lebih Stabil)
+        lottie.loadAnimation({
+            container: document.getElementById('lottie-animation'),
+            renderer: 'svg',
+            loop: true,
+            autoplay: true,
+            path: 'https://lottie.host/80407a1d-d41a-463d-838d-8a50c822e118/m0qNfU0yE8.json'
+        });
+
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prevBtn');
+        const nextBtn = document.getElementById('nextBtn');
+        const slideIndicator = document.getElementById('slideIndicator');
+
+        function updateSlide() {
+            slides.forEach((slide, index) => {
+                slide.classList.remove('active');
+                if (index === currentSlide) {
+                    slide.classList.add('active');
+                }
+            });
+
+            prevBtn.disabled = currentSlide === 0;
+            if (currentSlide === slides.length - 1) {
+                nextBtn.style.display = 'none';
+            } else {
+                nextBtn.style.display = 'block';
+            }
+
+            slideIndicator.innerText = `Halaman ${currentSlide + 1} dari ${slides.length}`;
+        }
+
+        function changeSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = 0;
+            if (currentSlide >= slides.length) currentSlide = slides.length - 1;
+            updateSlide();
+        }
+
+        function forgiveMe() {
+            const responseText = document.getElementById('response-text');
+            responseText.innerHTML = "Makasih banyak ya sayang! 🥰 Aku janji bakal makin sayang sama kamu! 🎉❤️";
+            alert("Makasih sudah memaafkan aku! ❤️");
+        }
+
+        // Fungsi Kontrol Musik
+        const bgMusic = document.getElementById('bgMusic');
+        const musicBtn = document.getElementById('musicBtn');
+        let isPlaying = false;
+
+        function toggleMusic() {
+            if (isPlaying) {
+                bgMusic.pause();
+                musicBtn.innerText = "🎵 Putar Lagu Romantis";
+                musicBtn.style.backgroundColor = "#6c757d";
+            } else {
+                bgMusic.play().then(() => {
+                    musicBtn.innerText = "🔇 Matikan Musik";
+                    musicBtn.style.backgroundColor = "#d63384";
+                }).catch(error => {
+                    alert("Gagal memutar musik. Pastikan file lagu.mp3 sudah ada di folder yang sama!");
+                });
+            }
+            isPlaying = !isPlaying;
+        }
+    </script>
+</body>
+</html>
